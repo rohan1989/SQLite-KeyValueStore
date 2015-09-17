@@ -19,30 +19,39 @@
     </section>
 
     <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+      <h2>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description:</h2>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+<p>Demonstrates the use of DatabaseManger - Key/Value storage layer.</p>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Use:</h2>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<ul>
+<li>Launch the application. A alert will be shown about the database initialization on the main screen(Title: KVStore) only if DatabaseManger fails to initialize.</li>
+<li>Select the Add button(+) on the navigation bar to add records.</li>
+<li>"Add New Record" screen will be shown. On this screen enter the "Employee" details to store in database. Here "Employee ID" will act as key in database and the Employee object as value.</li>
+<li>Hit the "Save Record" button to save record.</li>
+<li>Come back to main screen. The added record will be populated on the table view.</li>
+<li>Swipe rows to "DELETE" records. Demonstrates the implementation of "removeObjectForKey" API.</li>
+<li>Use search bar to "Search" a particular record with employeeID key. Demonstrates the implementation of "objectForKey" API.</li>
+</ul>
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<h2>
+<a id="databasemanger" class="anchor" href="#databasemanger" aria-hidden="true"><span class="octicon octicon-link"></span></a>DatabaseManger</h2>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<ul>
+<li>This class acts as a SQLite Key/Value storage layer.</li>
+<li>NOTE: To save any object in database the obejct class has to impelemnnt "initWithCoder:", "encodeWithCoder:" and should conform to "NSCoding" protocol. These methods are used to archive an object.</li>
+<li>I have added comments for each of the API's in this class. Please refer "DatabaseManger.h" file.</li>
+</ul>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<h2>
+<a id="unit-testing" class="anchor" href="#unit-testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit Testing</h2>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<ul>
+<li>All the test cases for DatabaseManger API's are written in "TestDataBase.m"</li>
+</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/rohan1989/SQLite-KeyValueStore">Sqlite-keyvaluestore</a> is maintained by <a href="https://github.com/rohan1989">rohan1989</a>.</span>
